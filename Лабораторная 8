@@ -40,7 +40,7 @@ fg = 0
 fraction = 1 #fraction-дробь
 while abs(fraction) > accuracy1:
     fg += summa
-    summa += -(np.linalg.det(linalg.matrix_power(x, 2 * n - 1))) / factorial
+    summa += (-(np.linalg.det(linalg.matrix_power(x, 2 * n - 1)))) / factorial
     n += 1
     factorial = factorial * (2*n - 1) * (2*n - 2)
     fraction = abs(fg-summa)  # считаем разницу
