@@ -47,4 +47,3 @@ while abs(fraction) > accuracy1:
     fg = 0
     print(n - 1, ':', summa, '   ', fraction)
 print('\nСумма знакопеременного ряда:', summa)
-
