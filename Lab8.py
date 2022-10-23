@@ -18,21 +18,15 @@ k = int(input("Введите количество строк (столбцов)
 while (k < 1) or (k > 31):
     k = int(input("Вы ввели неверное число\nВведите количество строк (столбцов) квадратной матрицы больше 1 и меньше 31:"))
 
-x = np.zeros((k, k), dtype=int) #задается матрица размерности k*k, состоящая из нулей
-
-for i in range(k):  #заполняем матрицу x с помощью генератора случайных чисел
-    for j in range(k):
-        x[i][j] = np.random.randint(-10, 10)
+x = np.random.randint(5, size=(k,k))
+print("Матрица:\n", x)
 
 r = np.linalg.matrix_rank(x)
-print("\nМатрица x: \n", x)
 print("\nРанг матрицы:", r)
-
-#precision = int(input('Введите количество знаков после запятой в результате вычисления:'))
-#precision = 0.1**precision
 
 accuracy = int(input('Введите минимальное количество знаков после запятой в результате вычисления:'))   #accuracy-точность
 accuracy1 = 0.1 ** accuracy
+
 n = 1 #номер слагаемого
 factorial = 1
 summa = 0
